@@ -144,15 +144,15 @@ MonoBehaviour:
     m_Metrics:
       m_Width: 31
       m_Height: 17
-      m_HorizontalBearingX: -15.5
-      m_HorizontalBearingY: 8.5
+      m_HorizontalBearingX: -5
+      m_HorizontalBearingY: 13
       m_HorizontalAdvance: 31
     m_GlyphRect:
       m_X: 32
       m_Y: 39
       m_Width: 31
       m_Height: 17
-    m_Scale: 1
+    m_Scale: 1.5
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
     sprite: {fileID: -1823562464, guid: 974252bdb0cb3844ebc6fcc96bbedabe, type: 3}
