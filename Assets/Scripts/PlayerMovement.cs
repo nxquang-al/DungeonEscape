@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isLadder = false;
     private bool isClimbing = false;
     private bool facingLeft = false;
+
     private int remainBullet = 10;
 
     [SerializeField] private float moveSpeed = 7f;
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
-
+    [SerializeField] private PlayerGun playerGun;
     private enum MovementState {idle, running, jumping, falling, ladder, shooting};
     private MovementState state = MovementState.idle;
 
@@ -56,11 +57,16 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
-        if(Input.GetButtonDown("Fire1")  && IsGrounded() && remainBullet > 0){
+        //if(Input.GetButtonDown("Fire1")  && IsGrounded() && remainBullet > 0){
+        //    isShooting = true;
+        //}
+
+        if (Input.GetButtonDown("Fire1") && IsGrounded() && playerGun.currentGun > 0)
+        {
             isShooting = true;
         }
 
-        if(Input.GetButtonDown("Vertical") && isLadder && Mathf.Abs(dirY) > 0f){
+        if (Input.GetButtonDown("Vertical") && isLadder && Mathf.Abs(dirY) > 0f){
             isClimbing = true;
         }
 
@@ -112,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.shooting;
             isShooting = false;
             Shoot();
-            remainBullet -= 1;
+            //remainBullet -= 1;
         }
 
         if(isLadder && isClimbing){
@@ -149,5 +155,7 @@ public class PlayerMovement : MonoBehaviour
     private void Shoot()
     {   
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        playerGun.Shot();
+
     }
 }

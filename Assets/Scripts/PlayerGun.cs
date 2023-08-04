@@ -12,13 +12,12 @@ public class PlayerGun : MonoBehaviour
     //public static event Action OnPlayerDamaged;
     //public static event Action OnPlayerDeath;
     //public static event Action OnPlayerGained;
-    private int currentGun, maxGun;
+    public int currentGun;
     private TMP_Text text;
 
     void Start()
     {
-        currentGun = 0;
-        maxGun = 5;
+        currentGun = 10;
         text = GameObject.Find("GunCounter").GetComponent<TextMeshProUGUI>();
         if (text != null)
         {
@@ -31,13 +30,13 @@ public class PlayerGun : MonoBehaviour
     }
     private string printGun()
     {
-        return "<sprite=1>" + currentGun + "/" + maxGun;
+        return "<sprite=2>" + currentGun;
     }
 
 
     public void CollectGun()
     {
-        currentGun = Math.Min(currentGun+1, maxGun);
+        currentGun = currentGun+1;
         if (text != null)
         {
             text.text = printGun();
@@ -51,7 +50,7 @@ public class PlayerGun : MonoBehaviour
 
     public void Shot()
     {
-        currentGun = Math.Max(currentGun, 0);
+        currentGun = Math.Max(currentGun-1, 0);
         text.text = printGun();
     }
 }

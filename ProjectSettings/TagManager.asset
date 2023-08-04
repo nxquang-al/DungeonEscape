@@ -4,13 +4,18 @@
 TagManager:
   serializedVersion: 2
   tags:
-  layers:
+  - HeartBar
+  - Gun
   - Ladder
   - Heart
-  - HeartBar
   - Energy
-  - Gun
-  - EnergyCounter
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Energy
+  - Water
+  - UI
   - GunCounter
   - Default
   - TransparentFX
@@ -18,13 +23,6 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
