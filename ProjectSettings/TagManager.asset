@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Heart
+  - HeartBar
+  - Energy
+  - Gun
+  - EnergyCounter
+  - GunCounter
   layers:
   - Default
   - TransparentFX
