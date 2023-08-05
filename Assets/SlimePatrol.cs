@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimePatrol : MonoBehaviour
+public class SlimePatrol : Enemy
 {
     public GameObject pointA;
     public GameObject pointB;

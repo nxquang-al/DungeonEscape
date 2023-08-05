@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LizardPatrol : MonoBehaviour
+public class LizardPatrol : Enemy
 {
     public GameObject pointA;
     public GameObject pointB;

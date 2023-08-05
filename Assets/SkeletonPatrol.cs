@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonPatrol : MonoBehaviour
+public class SkeletonPatrol : Enemy
 {
     public GameObject pointA;
     public GameObject pointB;
