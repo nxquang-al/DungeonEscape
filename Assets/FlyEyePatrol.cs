@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyEyePatrol : MonoBehaviour
+public class FlyEyePatrol : Enemy
 {
     public GameObject pointA;
     public GameObject pointB;

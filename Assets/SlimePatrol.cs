@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimePatrol : MonoBehaviour
+public class SlimePatrol : Enemy
 {
     public GameObject pointA;
     public GameObject pointB;
@@ -32,20 +32,24 @@ public class SlimePatrol : MonoBehaviour
         //     transform.Translate(Vector2.up * speed * Time.deltaTime);
         // }
             transform.Translate(Vector2.left * speed * Time.deltaTime);
+            float rotation = 90f;
+            if (speed < 0) {
+                rotation = -90f;
+            }
 
         if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointA.transform){
             currentPoint = pointB.transform;
-            transform.Rotate(0,0,90f);
+            transform.Rotate(0,0,rotation);
         } 
          if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointB.transform){
             currentPoint = pointC.transform;
-            transform.Rotate(0,0,90f);
+            transform.Rotate(0,0,rotation);
         }   if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointC.transform){
             currentPoint = pointD.transform;
-            transform.Rotate(0,0,90f);
+            transform.Rotate(0,0,rotation);
         }   if (Vector2.Distance(transform.position, currentPoint.position) < 1f && currentPoint == pointD.transform){
             currentPoint = pointA.transform;
-            transform.Rotate(0,0,90f);
+            transform.Rotate(0,0,rotation);
         } 
     }
 }
