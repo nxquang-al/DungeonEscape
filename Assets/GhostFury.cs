@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GhostFury : MonoBehaviour
+public class GhostFury : Enemy
 {
     public float speed;
     private Transform player;
@@ -17,4 +17,6 @@ public class GhostFury : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed*Time.deltaTime);
     }
+
+    
 }
