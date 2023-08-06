@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    private PlayerLife life;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -20,13 +21,14 @@ public class PlayerMovement : MonoBehaviour
     private int remainBullet = 10;
 
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 14f;
+    [SerializeField] private float bigJumpForce = 14f;
+    [SerializeField] private float smallJumpForce = 6f;
     [SerializeField] private float climbSpeed = 7f;
 
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
 
-    private enum MovementState {idle, running, jumping, falling, ladder, shooting};
+    private enum MovementState {idle, running, jumping, falling, ladder, shooting, hurt};
     private MovementState state = MovementState.idle;
 
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        life = GetComponent<PlayerLife>();
 
         if (facingLeft){
             Flip();
@@ -45,6 +48,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (!life.isAlive){
+            return;
+        }
+
         dirX = Input.GetAxisRaw("Horizontal");
         dirY = Input.GetAxisRaw("Vertical");
         
@@ -53,15 +60,28 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(Input.GetButtonDown("Jump") && IsGrounded()){
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(rb.velocity.x, bigJumpForce);
         }
 
         if(Input.GetButtonDown("Fire1")  && IsGrounded() && remainBullet > 0){
             isShooting = true;
         }
+        else{
+            isShooting = false;
+        }
 
-        if(Input.GetButtonDown("Vertical") && isLadder && Mathf.Abs(dirY) > 0f){
-            isClimbing = true;
+        if(Input.GetButtonDown("Vertical")){
+            if (isLadder){
+                if (Mathf.Abs(dirY) > 0f){
+                    isClimbing = true;
+                }
+                if (dirY < 0f && IsGrounded()){
+                    isClimbing = false;
+                }
+            }
+            else if (IsGrounded()){
+                rb.velocity = new Vector2(rb.velocity.x, smallJumpForce);
+            }
         }
 
         UpdateAnimationState();
@@ -85,14 +105,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(dirX > 0f){
             state = MovementState.running;
-            // sprite.flipX = false;
             if (facingLeft == true){
                 Flip();
             }
         }
         else if(dirX < 0f){
             state = MovementState.running;
-            // sprite.flipX = true;
             if (facingLeft == false){
                 Flip();
             }
@@ -111,8 +129,10 @@ public class PlayerMovement : MonoBehaviour
         if(isShooting){
             state = MovementState.shooting;
             isShooting = false;
-            Shoot();
-            remainBullet -= 1;
+            // Shoot();
+            Invoke("Shoot", 0.25f);
+            remainBullet -= 1;            // sprite.flipX = true;
+
         }
 
         if(isLadder && isClimbing){
@@ -127,14 +147,20 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("Ladder")){
+    private void OnTriggerEnter2D(Collider2D collider){
+        if(collider.CompareTag("Ladder")){
             isLadder = true;
+        }
+        else if(collider.CompareTag("Button")){
+            Button button = collider.GetComponent<Button>();
+            if (button != null){
+                button.Hit();
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision){
-        if(collision.CompareTag("Ladder")){
+    private void OnTriggerExit2D(Collider2D collider){
+        if(collider.CompareTag("Ladder")){
             isLadder = false;
             isClimbing = false;
         }
