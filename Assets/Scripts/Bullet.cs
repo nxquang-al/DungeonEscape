@@ -18,7 +18,16 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Instantiate(hitEffect, transform.position, transform.rotation);
+        if (other.CompareTag("Enemy")){
+            Instantiate(hitEffect, transform.position, transform.rotation);
+            DeactivateObject();
+        }
+        else{
+            Invoke("DeactivateObject", 1f);
+        }
+    }
+
+    void DeactivateObject(){
         Destroy(gameObject);
     }
 }
