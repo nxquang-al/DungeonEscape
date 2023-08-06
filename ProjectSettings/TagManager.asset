@@ -10,6 +10,8 @@ TagManager:
   - Trap
   - Button
   - Enemy
+  - Heart
+  - Energy
   layers:
   - Default
   - TransparentFX
