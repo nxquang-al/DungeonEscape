@@ -1089,6 +1089,9 @@ GameObject:
   - component: {fileID: 1063033474}
   - component: {fileID: 1063033479}
   - component: {fileID: 1063033480}
+  - component: {fileID: 1063033483}
+  - component: {fileID: 1063033482}
+  - component: {fileID: 1063033481}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1279,6 +1282,7 @@ MonoBehaviour:
   climbSpeed: 3
   firePoint: {fileID: 1889843707}
   bulletPrefab: {fileID: 6163629278801517126, guid: 9a29639daee71edcc8b47af3b3f881a7, type: 3}
+  playerGun: {fileID: 1063033482}
 --- !u!114 &1063033480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,6 +1297,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 1
   smallJumpForce: 10
+--- !u!114 &1063033481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063033473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8a66e457918534a9643bc84895a229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1063033482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063033473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c142139e3e75904991629ec1050ad3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentGun: 0
+--- !u!114 &1063033483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063033473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc969e3ae94183a49899f20d4435a7a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1101386616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,7 +1677,7 @@ GameObject:
   - component: {fileID: 1169027676}
   m_Layer: 6
   m_Name: Ladder
-  m_TagString: Enemy
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
