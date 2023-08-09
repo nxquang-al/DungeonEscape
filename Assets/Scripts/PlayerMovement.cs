@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
-    private PlayerLife life;
+    private PlayerHeart life;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -23,8 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float bigJumpForce = 14f;
-    [SerializeField] private float smallJumpForce = 6f;
     [SerializeField] private float climbSpeed = 7f;
+    public float smallJumpForce = 6f;
 
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        life = GetComponent<PlayerLife>();
+        life = GetComponent<PlayerHeart>();
 
         if (facingLeft){
             Flip();
@@ -64,10 +64,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, bigJumpForce);
         }
 
-        //if(Input.GetButtonDown("Fire1")  && IsGrounded() && remainBullet > 0){
-        //    isShooting = true;
-        //}
-
+        Debug.Log(playerGun.currentGun);
         if (Input.GetButtonDown("Fire1") && IsGrounded() && playerGun.currentGun > 0)
         {
             isShooting = true;
@@ -181,7 +178,6 @@ public class PlayerMovement : MonoBehaviour
     private void Shoot()
     {   
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        playerGun.Shot();
-
+        playerGun.Reduce();
     }
 }

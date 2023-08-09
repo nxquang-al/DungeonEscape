@@ -17,8 +17,8 @@ public class PlayerGun : MonoBehaviour
 
     void Start()
     {
-        currentGun = 10;
-        text = GameObject.Find("GunCounter").GetComponent<TextMeshProUGUI>();
+        currentGun = 0;
+        // text = GameObject.Find("GunCounter").GetComponent<TextMeshProUGUI>();
         if (text != null)
         {
             text.text = printGun();
@@ -36,7 +36,7 @@ public class PlayerGun : MonoBehaviour
 
     public void CollectGun()
     {
-        currentGun = currentGun+1;
+        currentGun++;
         if (text != null)
         {
             text.text = printGun();
@@ -48,9 +48,9 @@ public class PlayerGun : MonoBehaviour
     }
 
 
-    public void Shot()
+    public void Reduce()
     {
         currentGun = Math.Max(currentGun-1, 0);
-        text.text = printGun();
+        // text.text = printGun();
     }
 }

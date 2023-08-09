@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float speed = 20f;
     [SerializeField] private GameObject hitEffect; 
     private Rigidbody2D rb;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,15 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy")){
-            Instantiate(hitEffect, transform.position, transform.rotation);
+            GameObject obj = Instantiate(hitEffect, transform.position, transform.rotation);
+            anim = obj.GetComponent<Animator>();
+            anim.SetTrigger("hitEnemy");
+            DeactivateObject();
+        }
+        else if(other.CompareTag("Ladder") || other.CompareTag("Ground")){
+            GameObject obj = Instantiate(hitEffect, transform.position, transform.rotation);
+            anim = obj.GetComponent<Animator>();
+            anim.SetTrigger("hitWall");
             DeactivateObject();
         }
         else{
