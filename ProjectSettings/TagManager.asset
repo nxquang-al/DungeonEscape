@@ -5,11 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - HeartBar
-  - Gun
   - Ladder
   - Trap
   - Button
   - Enemy
+  - Gun
   - Heart
   - Energy
   layers:

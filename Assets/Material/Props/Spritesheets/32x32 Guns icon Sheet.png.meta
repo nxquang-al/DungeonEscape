@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 974252bdb0cb3844ebc6fcc96bbedabe
+guid: c92c10feda17ce749a34eafeb1d42de4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -118,14 +118,14 @@ TextureImporter:
         width: 28
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84650f5409d42614281f8089e507ff05
-      internalID: -362973492
+      spriteID: 115b10f725c221148a63441ec91235ae
+      internalID: 1012834803
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,31 @@ TextureImporter:
       name: 32x32 Guns icon Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 39
-        width: 31
-        height: 17
+        x: 31
+        y: 38
+        width: 33
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -2.5, y: 9.5}
+        - {x: -8.5, y: 2.5}
+        - {x: -16.5, y: 2.5}
+        - {x: -16.5, y: -9.5}
+        - {x: -7.5, y: -9.5}
+        - {x: -7.5, y: -6.5}
+        - {x: -3.5, y: -6.5}
+        - {x: -3.5, y: -9.5}
+        - {x: 4.5, y: -9.5}
+        - {x: 4.5, y: -4.5}
+        - {x: 16.5, y: -4.5}
+        - {x: 16.5, y: 9.5}
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: 0.3
       bones: []
-      spriteID: 361ae963f8ad9fb4998e5a6fd90eff68
-      internalID: -1823562464
+      spriteID: dcb4b7de26d81634e9cf590ad49e89e0
+      internalID: -102679792
       vertices: []
       indices: 
       edges: []
@@ -160,14 +172,14 @@ TextureImporter:
         width: 30
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7692ba37c876e24fb7f40dbfdeb9d48
-      internalID: 1235132602
+      spriteID: 18c72782c8b222b429fb9be8518a25fd
+      internalID: 1509180038
       vertices: []
       indices: 
       edges: []
@@ -181,14 +193,14 @@ TextureImporter:
         width: 32
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5692984200ede4469cf922ebef886dc
-      internalID: -1834481464
+      spriteID: eaf890a3955354f41bdfd1fa13103186
+      internalID: 1835161339
       vertices: []
       indices: 
       edges: []
@@ -202,14 +214,14 @@ TextureImporter:
         width: 64
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 668c25e44b5a9744aba580e7555fa0b5
-      internalID: -784436963
+      spriteID: cbc3b935520ca544aa8eb5db47b0dd91
+      internalID: -1433665977
       vertices: []
       indices: 
       edges: []
@@ -223,14 +235,14 @@ TextureImporter:
         width: 30
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbd0689d80b0d0942949a1b68ea6ecd9
-      internalID: -1313632339
+      spriteID: b8321179bc97a224cbaf2ead963d3e65
+      internalID: -1588678847
       vertices: []
       indices: 
       edges: []
@@ -244,14 +256,14 @@ TextureImporter:
         width: 23
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34899b7d811150d438cbd53afe08a934
-      internalID: 1389186527
+      spriteID: 058a19e1418c96b4a9583ce8f194bc34
+      internalID: -1677458999
       vertices: []
       indices: 
       edges: []
@@ -267,13 +279,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      32x32 Guns icon Sheet_0: -362973492
-      32x32 Guns icon Sheet_1: -1823562464
-      32x32 Guns icon Sheet_2: 1235132602
-      32x32 Guns icon Sheet_3: -1834481464
-      32x32 Guns icon Sheet_4: -784436963
-      32x32 Guns icon Sheet_5: -1313632339
-      32x32 Guns icon Sheet_6: 1389186527
+      32x32 Guns icon Sheet_0: 1012834803
+      32x32 Guns icon Sheet_1: -102679792
+      32x32 Guns icon Sheet_2: 1509180038
+      32x32 Guns icon Sheet_3: 1835161339
+      32x32 Guns icon Sheet_4: -1433665977
+      32x32 Guns icon Sheet_5: -1588678847
+      32x32 Guns icon Sheet_6: -1677458999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
