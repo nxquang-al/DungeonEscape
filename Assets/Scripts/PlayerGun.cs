@@ -18,7 +18,7 @@ public class PlayerGun : MonoBehaviour
     void Start()
     {
         currentGun = 0;
-        // text = GameObject.Find("GunCounter").GetComponent<TextMeshProUGUI>();
+        text = GameObject.Find("GunCounter").GetComponent<TextMeshProUGUI>();
         if (text != null)
         {
             text.text = printGun();
@@ -30,7 +30,7 @@ public class PlayerGun : MonoBehaviour
     }
     private string printGun()
     {
-        return "<sprite=2>" + currentGun;
+        return "<sprite=0>" + currentGun;
     }
 
 
