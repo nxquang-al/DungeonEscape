@@ -4,6 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - HeartBar
+  - Ladder
+  - Trap
+  - Button
+  - Enemy
   - Gun
   - Heart
   - Energy
@@ -11,16 +16,16 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Energy
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GunCounter
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
   - 
   - 
   - 
