@@ -7,16 +7,8 @@ public class Button : MonoBehaviour
     private Animator anim;
     private bool isHit = false;
 
-    public GameObject[] columns;
-    private MovingPlatform[] movingPlatforms;
 
-    void Awake(){
-        movingPlatforms = new MovingPlatform[columns.Length];
-        for (int i = 0; i < columns.Length; i++)
-        {
-            movingPlatforms[i] = columns[i].GetComponent<MovingPlatform>();
-        }   
-    }
+    public GameObject[] doors;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +20,9 @@ public class Button : MonoBehaviour
     public void Hit(){
         isHit = true;
         anim.SetTrigger("hit");
-        for (int i = 0; i < movingPlatforms.Length; i++)
+        for (int i = 0; i < doors.Length; i++)
         {
-            movingPlatforms[i].isMoving = true;
+            doors[i].GetComponent<Door>().Open();
         }
     }   
 }
