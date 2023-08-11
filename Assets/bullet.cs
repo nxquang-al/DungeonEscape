@@ -25,8 +25,4 @@ public class bullet : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
-    void DeactivateObject(){
-        Destroy(this.gameObject);
-    }
 }
