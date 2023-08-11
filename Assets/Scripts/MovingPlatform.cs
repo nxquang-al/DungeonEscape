@@ -10,9 +10,9 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] Transform[] wayPoints;
     [SerializeField] bool isContinous = false;
 
-    [HideInInspector]
-    public bool isMoving = false;
+    private Door door;
 
+    private bool isMoving = true;
     private int pointIndex;
     private int pointCount;
     private int direction = 1;
@@ -31,12 +31,13 @@ public class MovingPlatform : MonoBehaviour
         pointCount = wayPoints.Length;
         pointIndex = 1;
         targetPos = wayPoints[pointIndex].transform.position;
+        door = GetComponent<Door>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isMoving){
+        if (door.isOpen && isMoving){
             Move();
         }
     }
@@ -45,7 +46,6 @@ public class MovingPlatform : MonoBehaviour
         var step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
         if (transform.position == targetPos){
-            // NextPoint();
             isMoving = false;
         }
     }
