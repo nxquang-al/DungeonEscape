@@ -23,6 +23,10 @@ public class Bullet : MonoBehaviour
             GameObject obj = Instantiate(hitEffect, transform.position, transform.rotation);
             anim = obj.GetComponent<Animator>();
             anim.SetTrigger("hitEnemy");
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null){
+                enemy.Die();
+            }
             DeactivateObject();
         }
         else if(other.CompareTag("Ladder") || other.CompareTag("Ground")){

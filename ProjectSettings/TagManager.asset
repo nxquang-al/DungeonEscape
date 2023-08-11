@@ -12,6 +12,7 @@ TagManager:
   - Gun
   - Heart
   - Energy
+  - MapTransition
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerHeart life;
 
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private GameObject Camera;
 
     private float dirX = 0f;
     private float dirY = 0f;
@@ -64,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, bigJumpForce);
         }
 
-        Debug.Log(playerGun.currentGun);
         if (Input.GetButtonDown("Fire1") && IsGrounded() && playerGun.currentGun > 0)
         {
             isShooting = true;
@@ -159,6 +159,11 @@ public class PlayerMovement : MonoBehaviour
             if (button != null){
                 button.Hit();
             }
+        }
+        else if(collider.CompareTag("MapTransition")){
+            MapTransition mt = collider.GetComponent<MapTransition>();
+            transform.position = mt.playerNewPosition.transform.position;
+            Camera.transform.position = mt.cameraNewPosition.transform.position;
         }
     }
 
