@@ -62,7 +62,10 @@ public class PlayerHeart : MonoBehaviour
         {
             heartBar.SetHeartImage(currentHeart);
         }
-        Die();
+        else
+        {
+            Die();
+        }
     }
 
     private void Die(){

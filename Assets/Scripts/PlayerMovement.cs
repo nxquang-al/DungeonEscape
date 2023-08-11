@@ -132,13 +132,14 @@ public class PlayerMovement : MonoBehaviour
         if(isShooting){
             state = MovementState.shooting;
             isShooting = false;
-            // Shoot();
+            Shoot();
             Invoke("Shoot", 0.25f);
-            remainBullet -= 1;            // sprite.flipX = true;
+            //playerGun.currentGun -= 1;            // sprite.flipX = true;
+            playerGun.Reduce();
 
         }
 
-        if(isLadder && isClimbing){
+        if (isLadder && isClimbing){
             state = MovementState.ladder;
         }
 
@@ -178,6 +179,5 @@ public class PlayerMovement : MonoBehaviour
     private void Shoot()
     {   
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        playerGun.Reduce();
     }
 }
