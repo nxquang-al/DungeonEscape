@@ -1327,7 +1327,7 @@ GameObject:
   - component: {fileID: 1105878975}
   m_Layer: 0
   m_Name: Mainground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4989,6 +4989,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7757284700899903674, guid: 715ac5186510841c6b98950a99ac0436, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824399547060656988, guid: 715ac5186510841c6b98950a99ac0436, type: 3}
+      propertyPath: up
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824399547060656988, guid: 715ac5186510841c6b98950a99ac0436, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824399547060656988, guid: 715ac5186510841c6b98950a99ac0436, type: 3}
+      propertyPath: deltaTime
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

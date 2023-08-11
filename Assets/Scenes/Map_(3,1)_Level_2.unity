@@ -6869,7 +6869,7 @@ GameObject:
   - component: {fileID: 1243687450}
   m_Layer: 0
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6886,7 +6886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7da3d1af720632c8f5e09e8aec1b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
 --- !u!50 &1243687451
 Rigidbody2D:
   serializedVersion: 4
