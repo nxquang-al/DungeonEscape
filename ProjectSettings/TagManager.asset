@@ -3,21 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HeartBar
+  - Ladder
+  - Trap
+  - Button
+  - Enemy
+  - Gun
+  - Heart
+  - Energy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Energy
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GunCounter
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
   - 
   - 
   - 
