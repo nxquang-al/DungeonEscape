@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 1269215431}
   pointB: {fileID: 1368380374}
-  speed: 5
+  speed: 3
 --- !u!212 &328772456
 SpriteRenderer:
   m_ObjectHideFlags: 0
