@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isClimbing = false;
     private bool facingLeft = false;
 
-    private int remainBullet = 10;
+    //private int remainBullet = 10;
 
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float bigJumpForce = 14f;
@@ -132,13 +132,15 @@ public class PlayerMovement : MonoBehaviour
         if(isShooting){
             state = MovementState.shooting;
             isShooting = false;
-            // Shoot();
+            //Shoot();
             Invoke("Shoot", 0.25f);
-            remainBullet -= 1;            // sprite.flipX = true;
+            playerGun.Reduce();
+
+            //remainBullet -= 1;            // sprite.flipX = true;
 
         }
 
-        if(isLadder && isClimbing){
+        if (isLadder && isClimbing){
             state = MovementState.ladder;
         }
 
@@ -183,6 +185,5 @@ public class PlayerMovement : MonoBehaviour
     private void Shoot()
     {   
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        playerGun.Reduce();
     }
 }
