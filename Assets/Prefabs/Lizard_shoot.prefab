@@ -227,4 +227,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6287759301008676041, guid: a7178325f93d96dbcadfbfdbd1a2eb6c, type: 3}
   bulletParent: {fileID: 3476774100364789698}
-  fireRate: 2
+  fireRate: 4
