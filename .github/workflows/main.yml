@@ -28,4 +28,7 @@ on:
 jobs:
   buildWithLinux:
     uses: ./.github/workflows/build_linux.yml
+  deployToGitHubPages:
+    needs: buildWithLinux
+    uses: ./.github/workflows/build_web.yml
     
