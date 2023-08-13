@@ -12,13 +12,13 @@ public class PlayerEnergy : MonoBehaviour
     //public static event Action OnPlayerDamaged;
     //public static event Action OnPlayerDeath;
     //public static event Action OnPlayerGained;
-    private int currentEnergy, maxEnergy;
+    private int currentEnergy;
+    public int maxEnergy;
     private TMP_Text text;
 
     void Start()
     {
         currentEnergy = 0;
-        maxEnergy = 15;
         text = GameObject.Find("EnergyCounter").GetComponent<TextMeshProUGUI>();
         if (text != null)
         {
