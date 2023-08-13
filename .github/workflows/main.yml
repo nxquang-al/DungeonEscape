@@ -3,6 +3,7 @@ on:
  push:
    branches:
      — develop
+     - main
    # paths:
    #   — ‘Assets/**’
    #   — ‘Packages/**’
@@ -12,10 +13,10 @@ on:
      — opened
    branches:
      — main
-   # paths:
-   #   — ‘Assets/**’
-   #   — ‘Packages/**’
-   #   — ‘ProjectSettings/**’
+   paths:
+     — ‘Assets/**’
+     — ‘Packages/**’
+     — ‘ProjectSettings/**’
  # release:
  #   types:
  #     — published
