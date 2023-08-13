@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isClimbing = false;
     private bool facingLeft = false;
 
-    private int remainBullet = 10;
+    //private int remainBullet = 10;
 
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float bigJumpForce = 14f;
@@ -30,8 +30,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private PlayerGun playerGun;
-    private enum MovementState {idle, running, jumping, falling, ladder, shooting};
+    private enum MovementState {idle, running, jumping, falling, ladder, shooting, hurt};
     private MovementState state = MovementState.idle;
+
+    [HideInInspector]
+    public Vector2 reloadPosition = new Vector2(-2.5f, 1.0f);
 
     // Start is called before the first frame update
     private void Start()
@@ -51,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (!life.isAlive){
+            anim.SetInteger("state", (int)MovementState.hurt);
             return;
         }
 
@@ -132,13 +136,13 @@ public class PlayerMovement : MonoBehaviour
         if(isShooting){
             state = MovementState.shooting;
             isShooting = false;
-            // Shoot();
+            //Shoot();
             Invoke("Shoot", 0.25f);
-            remainBullet -= 1;            // sprite.flipX = true;
+            playerGun.Reduce();
 
         }
 
-        if(isLadder && isClimbing){
+        if (isLadder && isClimbing){
             state = MovementState.ladder;
         }
 
@@ -164,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
             MapTransition mt = collider.GetComponent<MapTransition>();
             transform.position = mt.playerNewPosition.transform.position;
             Camera.transform.position = mt.cameraNewPosition.transform.position;
+            reloadPosition = mt.playerNewPosition.transform.position;
         }
     }
 
@@ -183,6 +188,5 @@ public class PlayerMovement : MonoBehaviour
     private void Shoot()
     {   
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        playerGun.Reduce();
     }
 }

@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
             DeactivateObject();
         }
         else{
-            Invoke("DeactivateObject", 1f);
+            Invoke("DeactivateObject", 0.75f);
         }
     }
 

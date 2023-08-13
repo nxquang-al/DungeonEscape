@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 340c089383a957c488f32b45914af8e9
+guid: de65b94bb0e17e240a83c79b8759e185
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,127 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: meter_0
+      name: map 1-2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 35
-        width: 28
-        height: 7
+        x: 2
+        y: 92
+        width: 50
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f695991503eafe46904c1f16497acf3
-      internalID: 586219991
+      spriteID: 652275a71c257cc4e8b7c5a60fbc1bc5
+      internalID: -342545655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_1
+      name: map 1-2_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 28
-        width: 28
-        height: 7
+        x: 78
+        y: 92
+        width: 50
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78cbc5ab65551a84fb9a2e525db9d002
-      internalID: 2004329035
+      spriteID: b77d31195359c614a8e2227a5cb6c1f0
+      internalID: 2135541037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_2
+      name: map 1-2_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
+        y: 57
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12781231c21b3b14d8f5e895d9147e83
+      internalID: -1526255971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map 1-2_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 22
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0539d11b2140684799857433a9729aa
+      internalID: -811272779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: map 1-2_4
+      rect:
+        serializedVersion: 2
+        x: 78
         y: 21
-        width: 28
-        height: 7
+        width: 50
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 408e6d543ea805e4faccfa929df003be
-      internalID: -1670818003
+      spriteID: 4fe95b69afd35e542a2208c91c879dda
+      internalID: 1687962261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_3
+      name: map 1-2_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 14
-        width: 28
-        height: 7
+        x: 78
+        y: 57
+        width: 50
+        height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3195468c9e9174e4a96a90c41bb84f72
-      internalID: 1039798365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: meter_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 7
-        width: 28
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f300f0ca092d3f64cba5807c1a4085fb
-      internalID: 374125726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: meter_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80feff1ecd6e45847919c674990fac9c
-      internalID: -1112261106
+      spriteID: 7358c0c1057655542a9d9656d7036b67
+      internalID: -1550236508
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      meter_0: 586219991
-      meter_1: 2004329035
-      meter_2: -1670818003
-      meter_3: 1039798365
-      meter_4: 374125726
-      meter_5: -1112261106
+      map 1-2_0: 104159652
+      map 1-2_1: -342545655
+      map 1-2_2: -512216729
+      map 1-2_3: 2029530928
+      map 1-2_4: 2135541037
+      map 1-2_5: -1526255971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

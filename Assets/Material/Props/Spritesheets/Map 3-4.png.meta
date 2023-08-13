@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 340c089383a957c488f32b45914af8e9
+guid: 12c715fa0c81ac84a9d243608e52ad11
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: meter_0
+      name: Map 3-4_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 35
-        width: 28
-        height: 7
+        x: 3
+        y: 93
+        width: 48
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f695991503eafe46904c1f16497acf3
-      internalID: 586219991
+      spriteID: b7f74f6a990dffb45be3c04e837c64f6
+      internalID: -633137881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_1
+      name: Map 3-4_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 28
-        width: 28
-        height: 7
+        x: 79
+        y: 93
+        width: 48
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78cbc5ab65551a84fb9a2e525db9d002
-      internalID: 2004329035
+      spriteID: 36d0d8b9cd483a94c98b4d3bc5830a80
+      internalID: 1322822267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_2
+      name: Map 3-4_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 21
-        width: 28
-        height: 7
+        x: 79
+        y: 58
+        width: 48
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 408e6d543ea805e4faccfa929df003be
-      internalID: -1670818003
+      spriteID: 83a82236bef55d045bc97c08ae70c0a2
+      internalID: 753286864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_3
+      name: Map 3-4_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 14
-        width: 28
-        height: 7
+        x: 3
+        y: 58
+        width: 48
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3195468c9e9174e4a96a90c41bb84f72
-      internalID: 1039798365
+      spriteID: 99b3bde9efbe8a44dae45f9387511a95
+      internalID: -29680558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_4
+      name: Map 3-4_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 7
-        width: 28
-        height: 7
+        x: 3
+        y: 23
+        width: 48
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f300f0ca092d3f64cba5807c1a4085fb
-      internalID: 374125726
+      spriteID: a5ccb3b07b7b07b4aa02a1d7aa046f10
+      internalID: -306753691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: meter_5
+      name: Map 3-4_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 7
+        x: 79
+        y: 22
+        width: 48
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80feff1ecd6e45847919c674990fac9c
-      internalID: -1112261106
+      spriteID: d95fc043f445b234891d8bed13e37e02
+      internalID: 1574279903
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      meter_0: 586219991
-      meter_1: 2004329035
-      meter_2: -1670818003
-      meter_3: 1039798365
-      meter_4: 374125726
-      meter_5: -1112261106
+      Map 3-4_0: -633137881
+      Map 3-4_1: 1322822267
+      Map 3-4_2: 753286864
+      Map 3-4_3: -29680558
+      Map 3-4_4: -306753691
+      Map 3-4_5: 1574279903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
