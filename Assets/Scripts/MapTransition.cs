@@ -6,4 +6,5 @@ public class MapTransition : MonoBehaviour
 {
     public Transform playerNewPosition;
     public Transform cameraNewPosition;
+
 }
