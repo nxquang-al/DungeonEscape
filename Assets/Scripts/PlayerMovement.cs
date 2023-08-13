@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isLadder = false;
     private bool isClimbing = false;
     private bool facingLeft = false;
+    private bool isHurted = false;
 
     //private int remainBullet = 10;
 
@@ -148,12 +150,22 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.ladder;
         }
 
+        if (isHurted){
+            state = MovementState.hurt;
+        }
+
         anim.SetInteger("state", (int)state); 
     }
 
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("ElectricWall")){
+            IntroEffect();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider){
@@ -171,6 +183,9 @@ public class PlayerMovement : MonoBehaviour
             transform.position = mt.playerNewPosition.transform.position;
             Camera.transform.position = mt.cameraNewPosition.transform.position;
             reloadPosition = mt.playerNewPosition.transform.position;
+        }
+        else if(collider.CompareTag("LevelUp")){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -190,5 +205,16 @@ public class PlayerMovement : MonoBehaviour
     private void Shoot()
     {   
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    private void IntroEffect(){
+        isHurted = true;
+        coll.isTrigger = true;
+        Invoke("StartPlaying", 0.5f);
+    }
+
+    private void StartPlaying(){
+        isHurted = false;
+        coll.isTrigger = false;
     }
 }
