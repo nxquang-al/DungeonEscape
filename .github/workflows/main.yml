@@ -3,10 +3,10 @@ on:
  push:
    branches:
      — develop
-   paths:
-     — ‘Assets/**’
-     — ‘Packages/**’
-     — ‘ProjectSettings/**’
+   # paths:
+   #   — ‘Assets/**’
+   #   — ‘Packages/**’
+   #   — ‘ProjectSettings/**’
  pull_request:
    types:
      — opened
