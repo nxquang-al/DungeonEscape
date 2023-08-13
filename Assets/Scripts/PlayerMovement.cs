@@ -30,8 +30,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private PlayerGun playerGun;
-    private enum MovementState {idle, running, jumping, falling, ladder, shooting};
+    private enum MovementState {idle, running, jumping, falling, ladder, shooting, hurt};
     private MovementState state = MovementState.idle;
+
+    [HideInInspector]
+    public Vector2 reloadPosition = new Vector2(-2.5f, 1.0f);
 
     // Start is called before the first frame update
     private void Start()
@@ -51,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (!life.isAlive){
+            anim.SetInteger("state", (int)MovementState.hurt);
             return;
         }
 
@@ -136,8 +140,6 @@ public class PlayerMovement : MonoBehaviour
             Invoke("Shoot", 0.25f);
             playerGun.Reduce();
 
-            //remainBullet -= 1;            // sprite.flipX = true;
-
         }
 
         if (isLadder && isClimbing){
@@ -166,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
             MapTransition mt = collider.GetComponent<MapTransition>();
             transform.position = mt.playerNewPosition.transform.position;
             Camera.transform.position = mt.cameraNewPosition.transform.position;
+            reloadPosition = mt.playerNewPosition.transform.position;
         }
     }
 

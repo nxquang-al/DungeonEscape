@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 51342833}
   m_Layer: 10
   m_Name: Mainground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2274,6 +2274,22 @@ PrefabInstance:
     - target: {fileID: 2831142523993627972, guid: 247a5daa02db24760aa93a4c079d77f3, type: 3}
       propertyPath: m_Name
       value: Lizard_shoot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419902675866026913, guid: 247a5daa02db24760aa93a4c079d77f3, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1596508
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419902675866026913, guid: 247a5daa02db24760aa93a4c079d77f3, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3512399
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419902675866026913, guid: 247a5daa02db24760aa93a4c079d77f3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06616497
+      objectReference: {fileID: 0}
+    - target: {fileID: 3419902675866026913, guid: 247a5daa02db24760aa93a4c079d77f3, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.16813004
       objectReference: {fileID: 0}
     - target: {fileID: 8000554230413708836, guid: 247a5daa02db24760aa93a4c079d77f3, type: 3}
       propertyPath: m_RootOrder
@@ -6225,6 +6241,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lizard_shoot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9491615
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2947948
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.013227463
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1963526
+      objectReference: {fileID: 0}
     - target: {fileID: 9016353063003309968, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -7302,7 +7334,7 @@ GameObject:
   - component: {fileID: 416333208}
   m_Layer: 10
   m_Name: Mainground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8728,6 +8760,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lizard_shoot
       objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9844775
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4659576
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.050245047
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644640992101903443, guid: 0932660304a394ec2a4163423a84ce42, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.11077118
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8782,7 +8830,7 @@ GameObject:
   - component: {fileID: 492994501}
   m_Layer: 10
   m_Name: Mainground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10301,6 +10349,7 @@ GameObject:
   - component: {fileID: 498707133}
   - component: {fileID: 498707135}
   - component: {fileID: 498707134}
+  - component: {fileID: 498707136}
   m_Layer: 0
   m_Name: Lava
   m_TagString: Trap
@@ -10698,6 +10747,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &498707136
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498707132}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &502463834
 GameObject:
   m_ObjectHideFlags: 0
@@ -14215,7 +14300,7 @@ GameObject:
   - component: {fileID: 737532939}
   m_Layer: 10
   m_Name: Mainground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16049,11 +16134,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4161461409427515739, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.02
+      value: 2.71
       objectReference: {fileID: 0}
     - target: {fileID: 4161461409427515739, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.91
+      value: 4.99
       objectReference: {fileID: 0}
     - target: {fileID: 4331516110866133586, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_RootOrder
@@ -16689,6 +16774,14 @@ PrefabInstance:
     - target: {fileID: 2665710115943019756, guid: a1a8b4bd7c25f4a588d6f9e59c20df17, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354289213262872903, guid: a1a8b4bd7c25f4a588d6f9e59c20df17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354289213262872903, guid: a1a8b4bd7c25f4a588d6f9e59c20df17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.09
       objectReference: {fileID: 0}
     - target: {fileID: 3538622805991695372, guid: a1a8b4bd7c25f4a588d6f9e59c20df17, type: 3}
       propertyPath: m_RootOrder
@@ -18829,6 +18922,7 @@ MonoBehaviour:
   firePoint: {fileID: 1065868008}
   bulletPrefab: {fileID: 6163629278801517126, guid: 9a29639daee71edcc8b47af3b3f881a7, type: 3}
   playerGun: {fileID: 860477536}
+  reloadPosition: {x: -2.5, y: 1}
 --- !u!95 &860477539
 Animator:
   serializedVersion: 5
@@ -18982,7 +19076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860477533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.56, y: 0.58, z: 0}
+  m_LocalPosition: {x: -2.5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31760,7 +31854,7 @@ GameObject:
   - component: {fileID: 1189625560}
   m_Layer: 10
   m_Name: Mainground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38470,8 +38564,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!61 &1360525272
-BoxCollider2D:
+--- !u!19719996 &1360525272
+TilemapCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -38502,19 +38596,10 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -10, y: -4}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 26, y: 16}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1366393300
 GameObject:
   m_ObjectHideFlags: 0
@@ -43408,11 +43493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4161461409427515739, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.17
+      value: 3.23
       objectReference: {fileID: 0}
     - target: {fileID: 4161461409427515739, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.22
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 4331516110866133586, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_RootOrder
@@ -43420,11 +43505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4331516110866133586, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.04
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4331516110866133586, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.3
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 4331516110866133586, guid: 334b2b89255b54957bcf8464e14310c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -45508,6 +45593,7 @@ GameObject:
   - component: {fileID: 1612796828}
   - component: {fileID: 1612796830}
   - component: {fileID: 1612796829}
+  - component: {fileID: 1612796831}
   m_Layer: 0
   m_Name: Lavar
   m_TagString: Trap
@@ -45845,6 +45931,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1612796831
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612796827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1625602492
 GameObject:
   m_ObjectHideFlags: 0
@@ -45955,7 +46077,7 @@ GameObject:
   - component: {fileID: 1661901223}
   m_Layer: 10
   m_Name: Mainground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58130,6 +58252,7 @@ GameObject:
   - component: {fileID: 2076477024}
   - component: {fileID: 2076477026}
   - component: {fileID: 2076477025}
+  - component: {fileID: 2076477027}
   m_Layer: 0
   m_Name: Lavar
   m_TagString: Trap
@@ -58667,6 +58790,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &2076477027
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076477023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &2077876265
 GameObject:
   m_ObjectHideFlags: 0
@@ -59987,6 +60146,7 @@ GameObject:
   - component: {fileID: 2143534372}
   - component: {fileID: 2143534374}
   - component: {fileID: 2143534373}
+  - component: {fileID: 2143534375}
   m_Layer: 0
   m_Name: Lavar
   m_TagString: Trap
@@ -60314,6 +60474,42 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &2143534375
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143534371}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &2145648640
 GameObject:
   m_ObjectHideFlags: 0
