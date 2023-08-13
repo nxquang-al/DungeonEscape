@@ -16,15 +16,15 @@ on:
      — ‘Assets/**’
      — ‘Packages/**’
      — ‘ProjectSettings/**’
- release:
-   types:
-     — published
- workflow_dispatch:
-   inputs:
-     workflow_mode:
-       description: ‘[release] [Android, iOS, StandaloneLinux64, WebGL, StandaloneWindows, StandaloneWindows64, WSAPlayer, StandaloneOSX, Steam]’
-       required: false
-       default: ‘’
+ # release:
+ #   types:
+ #     — published
+ # workflow_dispatch:
+ #   inputs:
+ #     workflow_mode:
+ #       description: ‘[release] [Android, iOS, StandaloneLinux64, WebGL, StandaloneWindows, StandaloneWindows64, WSAPlayer, StandaloneOSX, Steam]’
+ #       required: false
+ #       default: ‘’
 jobs:
   buildWithLinux:
     uses: ./.github/workflows/build_linux.yml
