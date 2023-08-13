@@ -1,31 +1,31 @@
 name: Test, Build, and Deploy with GameCI
-on:
- push:
-   branches:
-     — develop
-     - main
-   # paths:
-   #   — ‘Assets/**’
-   #   — ‘Packages/**’
-   #   — ‘ProjectSettings/**’
- pull_request:
-   types:
-     — opened
-   branches:
-     — main
-   paths:
-     — ‘Assets/**’
-     — ‘Packages/**’
-     — ‘ProjectSettings/**’
- # release:
+on: [push, pull_request]
+ # push:
+ #   branches:
+ #     — develop
+ #     - main
+ #   # paths:
+ #   #   — ‘Assets/**’
+ #   #   — ‘Packages/**’
+ #   #   — ‘ProjectSettings/**’
+ # pull_request:
  #   types:
- #     — published
- # workflow_dispatch:
- #   inputs:
- #     workflow_mode:
- #       description: ‘[release] [Android, iOS, StandaloneLinux64, WebGL, StandaloneWindows, StandaloneWindows64, WSAPlayer, StandaloneOSX, Steam]’
- #       required: false
- #       default: ‘’
+ #     — opened
+ #   branches:
+ #     — main
+ #   paths:
+ #     — ‘Assets/**’
+ #     — ‘Packages/**’
+ #     — ‘ProjectSettings/**’
+ # # release:
+ # #   types:
+ # #     — published
+ # # workflow_dispatch:
+ # #   inputs:
+ # #     workflow_mode:
+ # #       description: ‘[release] [Android, iOS, StandaloneLinux64, WebGL, StandaloneWindows, StandaloneWindows64, WSAPlayer, StandaloneOSX, Steam]’
+ # #       required: false
+ # #       default: ‘’
 jobs:
   buildWithLinux:
     uses: ./.github/workflows/build_linux.yml
