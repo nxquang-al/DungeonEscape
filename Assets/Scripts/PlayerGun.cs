@@ -17,7 +17,6 @@ public class PlayerGun : MonoBehaviour
 
     void Start()
     {
-        currentGun = 10;
         text = GameObject.Find("GunCounter").GetComponent<TextMeshProUGUI>();
         if (text != null)
         {
