@@ -15,6 +15,7 @@ public class ItemCollector : MonoBehaviour
                 playerHeart.GainHeart();
                 Destroy(collision.gameObject);
             }
+            SoundManager.PlaySound("pickup");
         }
         else if (collision.gameObject.CompareTag("Gun"))
         {
@@ -24,6 +25,7 @@ public class ItemCollector : MonoBehaviour
                 playerGun.CollectGun();
                 Destroy(collision.gameObject);
             }
+            SoundManager.PlaySound("pickup");
         }
         else if (collision.gameObject.CompareTag("Energy"))
         {
@@ -33,7 +35,7 @@ public class ItemCollector : MonoBehaviour
                 playerEnergy.GainEnergy();
                 Destroy(collision.gameObject);
             }
-            
+            SoundManager.PlaySound("pickup");
         }
     }
 }

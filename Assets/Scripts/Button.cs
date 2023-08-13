@@ -20,6 +20,7 @@ public class Button : MonoBehaviour
     public void Hit(){
         isHit = true;
         anim.SetTrigger("hit");
+        SoundManager.PlaySound("hit01")
         for (int i = 0; i < doors.Length; i++)
         {
             doors[i].GetComponent<Door>().Open();
