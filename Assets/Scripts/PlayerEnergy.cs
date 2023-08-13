@@ -12,7 +12,8 @@ public class PlayerEnergy : MonoBehaviour
     //public static event Action OnPlayerDamaged;
     //public static event Action OnPlayerDeath;
     //public static event Action OnPlayerGained;
-    private int currentEnergy, maxEnergy;
+    [HideInInspector]
+    public int currentEnergy, maxEnergy;
     private TMP_Text text;
 
     void Start()
