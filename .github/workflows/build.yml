@@ -26,8 +26,8 @@ jobs:
           # Comment this out if you're using a pro license
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           # Un-Comment the following lines if you're using a pro license
-          # UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          # UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           # UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: WebGL
