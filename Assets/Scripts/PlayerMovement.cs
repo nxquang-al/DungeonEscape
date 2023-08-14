@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private PlayerGun playerGun;
-    private enum MovementState {idle, running, jumping, falling, ladder, shooting, hurt};
+    private enum MovementState { idle, running, jumping, falling, ladder, shooting, hurt };
     private MovementState state = MovementState.idle;
 
     [HideInInspector]
@@ -41,13 +41,14 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         life = GetComponent<PlayerHeart>();
 
-        if (facingLeft){
+        if (facingLeft)
+        {
             Flip();
         }
     }
@@ -55,19 +56,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (!life.isAlive){
+        if (!life.isAlive)
+        {
             anim.SetInteger("state", (int)MovementState.hurt);
             return;
         }
 
         dirX = Input.GetAxisRaw("Horizontal");
         dirY = Input.GetAxisRaw("Vertical");
-        
-        if(!isClimbing || IsGrounded()){
+
+        if (!isClimbing || IsGrounded())
+        {
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
         }
 
-        if(Input.GetButtonDown("Jump") && IsGrounded()){
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
             rb.velocity = new Vector2(rb.velocity.x, bigJumpForce);
             SoundManager.PlaySound("jump");
         }
@@ -77,20 +81,26 @@ public class PlayerMovement : MonoBehaviour
             isShooting = true;
             SoundManager.PlaySound("laser");
         }
-        else{
+        else
+        {
             isShooting = false;
         }
 
-        if(Input.GetButtonDown("Vertical")){
-            if (isLadder){
-                if (Mathf.Abs(dirY) > 0f){
+        if (Input.GetButtonDown("Vertical"))
+        {
+            if (isLadder)
+            {
+                if (Mathf.Abs(dirY) > 0f)
+                {
                     isClimbing = true;
                 }
-                if (dirY < 0f && IsGrounded()){
+                if (dirY < 0f && IsGrounded())
+                {
                     isClimbing = false;
                 }
             }
-            else if (IsGrounded()){
+            else if (IsGrounded())
+            {
                 rb.velocity = new Vector2(rb.velocity.x, smallJumpForce);
             }
         }
@@ -101,11 +111,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isClimbing){
+        if (isClimbing)
+        {
             rb.gravityScale = 0f;
             rb.velocity = new Vector2(rb.velocity.x, dirY * climbSpeed);
         }
-        else{
+        else
+        {
             rb.gravityScale = 3f;
         }
     }
@@ -114,30 +126,38 @@ public class PlayerMovement : MonoBehaviour
     {
         MovementState state;
 
-        if(dirX > 0f){
+        if (dirX > 0f)
+        {
             state = MovementState.running;
-            if (facingLeft == true){
+            if (facingLeft == true)
+            {
                 Flip();
             }
         }
-        else if(dirX < 0f){
+        else if (dirX < 0f)
+        {
             state = MovementState.running;
-            if (facingLeft == false){
+            if (facingLeft == false)
+            {
                 Flip();
             }
         }
-        else{
+        else
+        {
             state = MovementState.idle;
         }
 
-        if(rb.velocity.y > 0.1f){
+        if (rb.velocity.y > 0.1f)
+        {
             state = MovementState.jumping;
         }
-        else if(rb.velocity.y < -.1f){
+        else if (rb.velocity.y < -.1f)
+        {
             state = MovementState.falling;
         }
 
-        if(isShooting){
+        if (isShooting)
+        {
             state = MovementState.shooting;
             isShooting = false;
             //Shoot();
@@ -146,15 +166,17 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (isLadder && isClimbing){
+        if (isLadder && isClimbing)
+        {
             state = MovementState.ladder;
         }
 
-        if (isHurted){
+        if (isHurted)
+        {
             state = MovementState.hurt;
         }
 
-        anim.SetInteger("state", (int)state); 
+        anim.SetInteger("state", (int)state);
     }
 
     private bool IsGrounded()
@@ -162,35 +184,49 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.CompareTag("ElectricWall")){
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ElectricWall"))
+        {
             IntroEffect();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider){
-        if(collider.CompareTag("Ladder")){
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Ladder"))
+        {
             isLadder = true;
         }
-        else if(collider.CompareTag("Button")){
+        else if (collider.CompareTag("Button"))
+        {
             Button button = collider.GetComponent<Button>();
-            if (button != null){
+            if (button != null)
+            {
                 button.Hit();
             }
         }
-        else if(collider.CompareTag("MapTransition")){
+        else if (collider.CompareTag("MapTransition"))
+        {
             MapTransition mt = collider.GetComponent<MapTransition>();
             transform.position = mt.playerNewPosition.transform.position;
             Camera.transform.position = mt.cameraNewPosition.transform.position;
             reloadPosition = mt.playerNewPosition.transform.position;
         }
-        else if(collider.CompareTag("LevelUp")){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        else if (collider.CompareTag("LevelUp"))
+        {
+            SceneManager.LoadScene(2);
+        }
+        else if (collider.CompareTag("WinTrigger"))
+        {
+            SceneManager.LoadScene(4);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collider){
-        if(collider.CompareTag("Ladder")){
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Ladder"))
+        {
             isLadder = false;
             isClimbing = false;
         }
@@ -203,17 +239,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Shoot()
-    {   
+    {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
-    private void IntroEffect(){
+    private void IntroEffect()
+    {
         isHurted = true;
         coll.isTrigger = true;
         Invoke("StartPlaying", 0.5f);
     }
 
-    private void StartPlaying(){
+    private void StartPlaying()
+    {
         isHurted = false;
         coll.isTrigger = false;
     }
