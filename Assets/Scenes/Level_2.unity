@@ -32449,8 +32449,8 @@ MonoBehaviour:
   uiImage: {fileID: 0}
   spriteObject: {fileID: 753286864, guid: 12c715fa0c81ac84a9d243608e52ad11, type: 3}
   CameraPoint: {fileID: 493148468}
-  groupActive: {fileID: 0}
-  groupDisabled: {fileID: 0}
+  groupActive: {fileID: 602171708}
+  groupDisabled: {fileID: 593693435}
 --- !u!4 &796798040
 Transform:
   m_ObjectHideFlags: 0
