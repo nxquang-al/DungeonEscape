@@ -16,6 +16,7 @@ TagManager:
   - MapTransition
   - ElectricWall
   - LevelUp
+  - WinTrigger
   layers:
   - Default
   - TransparentFX
