@@ -6,6 +6,7 @@ public class Button : MonoBehaviour
 {
     private Animator anim;
     private bool isHit = false;
+    public bool destroyDoorOnHit = false;
 
 
     public GameObject[] doors;
@@ -20,9 +21,16 @@ public class Button : MonoBehaviour
     public void Hit(){
         isHit = true;
         anim.SetTrigger("hit");
+        SoundManager.PlaySound("hit01");
         for (int i = 0; i < doors.Length; i++)
         {
-            doors[i].GetComponent<Door>().Open();
+            if(doors[i] != null){
+                doors[i].GetComponent<Door>().Open();
+                if(destroyDoorOnHit){
+                    doors[i].GetComponent<Door>().DeactivateObject();
+                    doors[i] = null;
+                }
+            }
         }
     }   
 }

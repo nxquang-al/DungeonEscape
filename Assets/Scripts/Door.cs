@@ -19,4 +19,8 @@ public class Door : MonoBehaviour
         isOpen = true;
         coll.isTrigger = true;
     }
+
+    public void DeactivateObject(){
+        Destroy(gameObject);
+    }
 }

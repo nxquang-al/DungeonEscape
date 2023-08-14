@@ -42,8 +42,17 @@ public class PlayerHeart : MonoBehaviour
         smallJumpForce = GetComponent<PlayerMovement>().smallJumpForce;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("Enemy"))
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isAlive && collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (isAlive && collider.CompareTag("Trap"))
         {
             TakeDamage();
         }
@@ -61,18 +70,37 @@ public class PlayerHeart : MonoBehaviour
         if (currentHeart > 0)
         {
             heartBar.SetHeartImage(currentHeart);
+            SoundManager.PlaySound("take_damage");
         }
         Die();
     }
-
-    private void Die(){
+    private void Die()
+    {
         isAlive = false;
-        anim.SetTrigger("death");
         rb.velocity = new Vector2(rb.velocity.x, smallJumpForce);
         coll.isTrigger = true;
     }
 
-    private void RestartScene(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    private void RestartOrReplay()
+    {
+        if (currentHeart > 0)
+        {
+            Replay();
+        }
+        else
+        {
+            LoadLoseScene();
+        }
+    }
+
+    private void Replay()
+    {
+        isAlive = true;
+        coll.isTrigger = false;
+        transform.position = GetComponent<PlayerMovement>().reloadPosition;
+    }
+    private void LoadLoseScene()
+    {
+        SceneManager.LoadScene(5);
     }
 }
