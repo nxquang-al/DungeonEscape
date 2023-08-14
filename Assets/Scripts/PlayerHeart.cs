@@ -70,6 +70,7 @@ public class PlayerHeart : MonoBehaviour
         if (currentHeart > 0)
         {
             heartBar.SetHeartImage(currentHeart);
+            SoundManager.PlaySound("take_damage");
         }
         Die();
     }

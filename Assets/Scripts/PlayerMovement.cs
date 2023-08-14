@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector]
     public Vector2 reloadPosition = new Vector2(-2.5f, 1.0f);
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -105,7 +106,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        UpdateAnimationState();
+        MovementState _st =  UpdateAnimationState();
+
+        if (IsGrounded() && _st == MovementState.falling) {
+            SoundManager.PlaySound("thump");
+        } 
 
     }
 
@@ -122,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void UpdateAnimationState()
+    private MovementState UpdateAnimationState()
     {
         MovementState state;
 
@@ -154,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
         else if (rb.velocity.y < -.1f)
         {
             state = MovementState.falling;
+
         }
 
         if (isShooting)
@@ -175,8 +181,9 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.hurt;
         }
+        anim.SetInteger("state", (int)state); 
 
-        anim.SetInteger("state", (int)state);
+        return state;
     }
 
     private bool IsGrounded()

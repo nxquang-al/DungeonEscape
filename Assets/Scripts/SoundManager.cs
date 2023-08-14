@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip flame, gun_reload_or_click, hit01, jump, pickup, laser;
+    public static AudioClip flame, gun_reload_or_click, hit01, jump, pickup, laser, takeDamage, thump;
     static AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,8 @@ public class SoundManager : MonoBehaviour
         laser = Resources.Load<AudioClip>("laser");
         jump = Resources.Load<AudioClip>("jump");
         pickup = Resources.Load<AudioClip>("pickup");
+        takeDamage = Resources.Load<AudioClip>("take_damage");
+        thump = Resources.Load<AudioClip>("thump");
         
         audioSrc = GetComponent<AudioSource>();
     }
@@ -45,6 +47,12 @@ public class SoundManager : MonoBehaviour
                 break;
             case "pickup":
                 audioSrc.PlayOneShot(pickup);
+                break;
+            case "thump":
+                audioSrc.PlayOneShot(thump);
+                break;
+            case "take_damage":
+                audioSrc.PlayOneShot(takeDamage);
                 break;
             default:
                 break;
