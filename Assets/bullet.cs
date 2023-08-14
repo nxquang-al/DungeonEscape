@@ -18,10 +18,13 @@ public class bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Ladder") || other.CompareTag("Ground") || other.CompareTag("Player")){
-            // Debug.Log("collision");
             GameObject obj = Instantiate(hitEffect, transform.position, transform.rotation);
-            // anim = obj.GetComponent<Animator>();
-            // anim.SetTrigger("hitWall");        
+            if (other.CompareTag("Player")) {
+                PlayerHeart player = other.GetComponent<PlayerHeart>();
+                if (player != null) {
+                    player.TakeDamage();
+                }
+            }
             Destroy(this.gameObject);
         }
     }

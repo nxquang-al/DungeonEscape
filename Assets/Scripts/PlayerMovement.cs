@@ -69,11 +69,13 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && IsGrounded()){
             rb.velocity = new Vector2(rb.velocity.x, bigJumpForce);
+            SoundManager.PlaySound("jump");
         }
 
         if (Input.GetButtonDown("Fire1") && IsGrounded() && playerGun.currentGun > 0)
         {
             isShooting = true;
+            SoundManager.PlaySound("laser");
         }
         else{
             isShooting = false;

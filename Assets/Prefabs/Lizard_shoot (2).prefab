@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6287759301008676041, guid: abcaa42a1284be2fb9f1b2dd2882d65d, type: 3}
   bulletParent: {fileID: 5363751088908487820}
-  fireRate: 2
+  fireRate: 3
 --- !u!1 &5363751088908487820
 GameObject:
   m_ObjectHideFlags: 0

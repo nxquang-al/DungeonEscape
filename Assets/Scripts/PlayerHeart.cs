@@ -43,14 +43,14 @@ public class PlayerHeart : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (isAlive && collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collider){
-        if (collider.CompareTag("Trap")){
+        if (isAlive && collider.CompareTag("Trap")){
             TakeDamage();
         }
     }
