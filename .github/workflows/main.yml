@@ -27,9 +27,9 @@ on: [push, pull_request]
  # #       required: false
  # #       default: ‘’
 jobs:
-  buildWithLinux:
-    uses: ./.github/workflows/build_linux.yml
+  build:
+    uses: ./.github/workflows/build.yml
   deployToGitHubPages:
-    needs: buildWithLinux
+    needs: build
     uses: ./.github/workflows/build_web.yml
     
