@@ -108,10 +108,6 @@ public class PlayerMovement : MonoBehaviour
 
         MovementState _st =  UpdateAnimationState();
 
-        if (IsGrounded() && _st == MovementState.falling) {
-            SoundManager.PlaySound("thump");
-        } 
-
     }
 
     private void FixedUpdate()
